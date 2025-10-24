@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    .from-control.btn1 {
+        height: 60px;
+        background: #f3f3f3 !important;
+    }
+</style>
+<div class="row mt-3">
+    <div class="text-center fs-3"> sign <b class=" text-color1">in
+            <i class="fa-solid fa-phone"></i></b>
+        <hr class="w-25 mx-auto">
+    </div>
+</div>
+<div class="row login bg-light">
+    <div class="col-sm-6 mx-auto p-5 bg-light">
+        <form method="post">
+            {% csrf_token %}
+            <input type="email" name="email" required class="form-control mb-3 shadow-lg" placeholder="E-mail" />
+            <input type="password" name="passwd" required class="form-control mb-3 shadow-lg" placeholder="password" />
+            <input type="submit" value="LOGIN" required class="form-control mb-3 shadow-lg text-light"
+                style="background: #880e4f !important;" />
+        </form>
+        <a href="/register/" class="fs-5 text-color1 fw-bold float-end">if u are not register ! register now</a>
+    </div>
+</div>
+{% endblock %}

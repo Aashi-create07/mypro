@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="row slider">
+  <div class="col-sm-12 mx-auto">
+    <div class="row">
+      <div class="col-sm-12 pt-5">
+        <div class="fs-2 text-center text-light text-uppercase mt-5">THE LOGIC OF<b class="text-color1 px-4">OUTDOOROLOGY
+            <i class="fa-solid fa-truck"></i>
+          </b></div>
+
+        <div class="text-center text-light">"Outdoorlogy is a project aimed at inspiring individuals, especially urban youth,
+           to rediscover the joy of outdoor activities in a world dominated by digital screens and indoor lifestyles. The project 
+           focuses on creating awareness about the physical, mental, and emotional benefits of spending time in nature while also 
+           providing practical tools, resources,
+           and platforms to encourage active participation in outdoor adventures."</div>
+
+       
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+<!--start page heading-->
+<hr class="w-50 mx-auto">
+<p class=" text-center fs-3 mt-3">ABOUT<b class="text-color1"> US <i class="fa-solid fa-user"></i></b></p>
+<hr class="w-50 mx-auto">
+<!--end page heading-->
+<!--start about us-->
+<div class="row about us">
+
+  <div class="col-sm-10 mx-auto">
+    <div class="row">
+      <div class="col-sm-6">
+        <img src="{% static 'images/1.webp' %}" class="img-thumbnail w-100 imgabout">
+      </div>
+      <div class="col-sm-6">
+        <p class="p-3 aboutcontent w-20 text-center"><B class="text-color1  ">WELCOME</B></p>
+        <p class="p-3 aboutcontent">For an adventurous traveler, safety remains paramount, but it’s
+                             intertwined with access to reliable gear and well-maintained trails. Accommodation needs to be practical, 
+                             perhaps a cozy cabin or a durable tent, offering proximity to the activity, not necessarily luxury. Transportation 
+                             is often self-powered hiking boots, bikes,
+                             or kayaks making route planning and navigation crucial.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end about us-->
+
+<!--start product-->
+<div class="row product"></div>
+<!--end product-->
+<!--start icon-->
+<div class="row intro"></div>
+<!--end icon-->
+<!--start contact us-->
+<div class="row contactus"></div>
+<!--end contact us-->
+
+
+
+{% endblock %}

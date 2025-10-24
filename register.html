@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!--start page heading-->
+    <hr class="w-50 mx-auto">
+    <p class=" text-center fs-3 mt-3">Register<b class="text-color1">now <i class="fa-solid fa-user "></i></b></p>
+    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quibusdam soluta necessitatibus.</p>
+    <hr class="w-50 mx-auto">
+<!--end page heading-->
+
+<div class="row">
+    <div class="col-sm-6 mx-auto mb-3 bg-light p-5 mx-auto">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="text" name="name" required placeholder="Name"class="form-control mb-3 shadow"/>
+            <input type="email" name="email" required placeholder="E-mail"class="form-control mb-3 shadow"/>
+            <input type="number" name="mob" required placeholder="Mobile"class="form-control mb-3 shadow"/>
+            <input type="password" name="passwd" required placeholder="Password"class="form-control mb-3 shadow"/>
+            <input type="file" name="fu" >
+            <textarea name="address" class="form-control mb-3 shadow"></textarea>
+            <input type="submit" Value="save" class="form-control mb-3 shadow bg-mycolor1" />
+
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

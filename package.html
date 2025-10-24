@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!--start page heading-->
+    <hr class="w-50 mx-auto">
+    <p class=" text-center fs-3 mt-3">Latest <b class="text-color1">Packages </b></p>
+    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quibusdam soluta necessitatibus.</p>
+    <hr class="w-50 mx-auto">
+<!--end page heading-->
+
+<div class="row ">
+     {% for r in package %}
+            <!--start packages -->
+            <div class="col-sm-3">
+                <div class="card shadow-lg my-3 p-3 fs-5" style="font-size: 13px !important;">
+                    <span class="bg-mycolor2 badge text-light position-absolute top-0 start-50 translate-middle"><i
+                            class="fa-solid fa-indian-rupee-sign"></i>{{r.discounted_price}}</span>
+                    <img src="/{{r.picture}}" class="card-img-top" />
+                    <p>{{r.picture}}</p>
+                    <h5 class="card-title">{{r.package_name}}</h5>
+                    <b>{{r.title}}</b>
+                    <p class="card-text" style="height: 70px; overflow-y: auto;">{{r.package_info}}</p>
+                    <p class="card-text">
+                        <b>Price :</b><i class="fa-solid fa-indian-rupee-sign"></i><s>{{r.Price}}</s> per person
+                    </p>
+                    <p class="card-text">
+                        
+                        <small class="badge bg-mycolor1 float-start" ><i class="fa-solid fa-calender"></i>{{r.posted_date}}</small>
+                        <small class="badge bg-mycolor1 float-end">{{r.city}}</small>
+
+                    </p>
+                    <a href="/blogger/package?dprice={{r.discounted_price}}&pkg={{r.package_name}}"
+                        class="btn bg-mycolor1 text-light w-50">book now &rarr;</a>
+                </div>
+            </div>
+            <!--end packages -->
+            {% endfor %}
+</div>
+
+{% endblock %}
